@@ -12,17 +12,18 @@
 |---|---|
 | **Client** | Williamson County Law Enforcement |
 | **Context** | Spring 2026, AI Dev Enterprise capstone |
-| **My role** | **[ADD: solo build / your role on the team]** |
-| **Status** | **[ADD: course deliverable / pilot with the department / in active use]** |
+| **My role** | **[Mainly Audio Transcription / But i worked on some other stuff too]** |
+| **Status** | **[In active use]** |
 | **Stack** | Python, PySide6, SQLite, Faster-Whisper, pyannote.audio, Ollama (LLaVA), bcrypt |
 
 ---
 
 ## The problem
 
-Investigators accumulate evidence — scanned documents, seized-device images, recorded interviews and calls — faster than anyone can manually review it. Each format needs a different kind of triage (read the doc, look at the image, listen to the audio), there's no consistent way to search across all of it for case-relevant terms, and every step needs to be defensible in court: who touched the file, when, and did it change.
+Investigators accumulate evidence — scanned documents, seized-device images, recorded interviews and calls — faster than anyone can manually review it. Each format needs a different kind of triage (read the doc, look at the image, listen to the audio), there's no consistent way to search across all of it for case-relevant terms, and every step needs to be defensible in court: who touched the file, when, and did it change. 
 
 Virgil centralizes that intake into one desktop tool, run entirely on department hardware — nothing leaves the building.
+Also meaning, this sucker runs slow if you don't have a beefy setup.
 
 ## Architecture
 
@@ -85,9 +86,20 @@ Every module runs locally — no evidence file or transcript is ever sent to a t
 
 **Defensible chain of custody.** SHA-256 hashing happens at ingest and is stored alongside every evidence record, so file integrity can be verified later without relying on the OS's file metadata.
 
-## Sample output
+## Sample output - a few pics of some of the individual menus.
+<img width="959" height="539" alt="Screenshot 2026-09-18 175641" src="https://github.com/user-attachments/assets/6abaf023-c7fa-4f39-951f-bd9695bb1190" />
+<img width="959" height="539" alt="Screenshot 2026-09-18 180040" src="https://github.com/user-attachments/assets/1a65462b-3bc1-4d4b-8f9f-1a932aabad2f" />
+<img width="959" height="539" alt="Screenshot 2026-09-18 181139" src="https://github.com/user-attachments/assets/4f01f2c4-8df1-49ef-a716-9bfc9ab05b65" />
 
-**[ADD SCREENSHOTS HERE — see notes below]**
+
+
+
+
+
+
+
+
+
 
 Suggested captures, each with case numbers/names/real evidence redacted or replaced with demo data first:
 - Case dashboard / case library view
@@ -95,12 +107,6 @@ Suggested captures, each with case numbers/names/real evidence redacted or repla
 - Image panel: blurred thumbnail → revealed → AI scene description + flags
 - Transcription panel: diarized transcript with timestamps and tone labels
 - Audit log view
-
-## Results
-
-**[ADD: fill this in with anything real you have — e.g. "processed N cases during the pilot," "cut manual document review from X to Y," instructor/client feedback, or just leave this section out if there's nothing quantitative yet. Don't guess at numbers — an honest "still in pilot with the department" line reads better to recruiters than a vague stat.]**
-
----
 
 ### A note on scope
 
